@@ -1,0 +1,56 @@
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: namespace-test-01-build
+  labels:
+    app : namespace-test-01
+    team: group:default/restricted
+    build-namespace: namespace-test-01-build
+    size: medium
+    environment: build
+    goldilocks.fairwinds.com/enabled: "true"
+    argocd.argoproj.io/managed-by: namespace-test-01-build
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: namespace-test-01-dev
+  labels:
+    app : namespace-test-01
+    team: group:default/restricted
+    build-namespace: namespace-test-01-build
+    size: medium
+    environment: dev
+    goldilocks.fairwinds.com/enabled: "true"
+    argocd.argoproj.io/managed-by: namespace-test-01-build
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: namespace-test-01-qa
+  labels:
+    app : namespace-test-01
+    team: group:default/restricted
+    build-namespace: namespace-test-01-build
+    size: medium
+    environment: qa
+    goldilocks.fairwinds.com/enabled: "true"
+    argocd.argoproj.io/managed-by: namespace-test-01-build
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: namespace-test-01-prod
+  labels:
+    app : namespace-test-01
+    team: group:default/restricted
+    build-namespace: namespace-test-01-build
+    size: medium
+    environment: prod
+    goldilocks.fairwinds.com/enabled: "true"
+    argocd.argoproj.io/managed-by: namespace-test-01-build
