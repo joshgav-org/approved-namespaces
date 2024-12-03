@@ -1,0 +1,56 @@
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: react-test-11-pr-build
+  labels:
+    app : react-test-11-pr
+    team: group:default/restricted
+    build-namespace: react-test-11-pr-build
+    size: medium
+    environment: build
+    goldilocks.fairwinds.com/enabled: "true"
+    argocd.argoproj.io/managed-by: react-test-11-pr-build
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: react-test-11-pr-dev
+  labels:
+    app : react-test-11-pr
+    team: group:default/restricted
+    build-namespace: react-test-11-pr-build
+    size: medium
+    environment: dev
+    goldilocks.fairwinds.com/enabled: "true"
+    argocd.argoproj.io/managed-by: react-test-11-pr-build
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: react-test-11-pr-qa
+  labels:
+    app : react-test-11-pr
+    team: group:default/restricted
+    build-namespace: react-test-11-pr-build
+    size: medium
+    environment: qa
+    goldilocks.fairwinds.com/enabled: "true"
+    argocd.argoproj.io/managed-by: react-test-11-pr-build
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: react-test-11-pr-prod
+  labels:
+    app : react-test-11-pr
+    team: group:default/restricted
+    build-namespace: react-test-11-pr-build
+    size: medium
+    environment: prod
+    goldilocks.fairwinds.com/enabled: "true"
+    argocd.argoproj.io/managed-by: react-test-11-pr-build
